@@ -412,7 +412,7 @@ def save_WithHole(dom, filename_out, U, S11, S12, S13, S22, S23, S33, E11, E12, 
     y = delaun.d['vertices'][:, 1]
     z = np.zeros( dom[:, 1].shape)
 
-    conn = np.ascontiguousarray(conn, dtype=np.int)
+    conn = np.ascontiguousarray(conn, dtype=int)
     x = np.ascontiguousarray(x, dtype=np.float32)
     y = np.ascontiguousarray(y, dtype=np.float32)
     z = np.ascontiguousarray(z, dtype=np.float32)
@@ -445,7 +445,7 @@ def save_WithHole(dom, filename_out, U, S11, S12, S13, S22, S23, S33, E11, E12, 
     P32 = np.ascontiguousarray(P32, dtype=np.float32)
     P33 = np.ascontiguousarray(P33, dtype=np.float32)
 
-    off = np.ascontiguousarray(off, dtype=np.int)
+    off = np.ascontiguousarray(off, dtype=int)
 
     point_data ={"u1": U[0,:],"u2": U[1,:],"u3": U[2,:], "S-VonMises": SVonMises[:,0], \
                                                "S11": S11[:,0], "S12": S12[:,0], "S13": S13[:,0], \
